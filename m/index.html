@@ -159,6 +159,26 @@ nav.tab a.on svg{stroke-width:2}
 .shopt{font-size:12px;color:#8a4b2a;font-weight:600;letter-spacing:1px;margin-bottom:8px}
 .shoparch{font-size:11.5px;color:#9c8f7b;line-height:1.75;margin:-2px 0 10px;
   padding-bottom:9px;border-bottom:1px dashed #efe7d9}
+.gwrap{margin:2px 0 0}
+.gtop{background:linear-gradient(180deg,#fdf9f2,#f6eddc);border:1px solid #ddcfb6;border-radius:12px;
+  padding:14px 16px;text-align:center}
+.gtop b{display:block;font-size:17px;color:#8a4b2a;letter-spacing:3px;font-weight:600}
+.gtop span{display:block;font-size:12px;color:#6b6055;margin-top:4px;letter-spacing:.3px}
+.gtop em{display:block;font-style:normal;font-size:11px;color:#a29887;margin-top:3px}
+.gbar{width:1px;height:16px;background:#d5c7ac;margin:0 auto}
+.glist{display:flex;flex-direction:column;gap:8px}
+.gcell{background:#fff;border:1px solid #e6dfd1;border-radius:11px;padding:12px 13px}
+.gcn b{font-size:14px;color:#3a3229}
+.gcn span{display:inline-block;margin-left:6px;font-size:11px;color:#8a4b2a;background:#f6efe6;
+  border-radius:10px;padding:2px 8px}
+.gcell p{font-size:12px;color:#6b6055;line-height:1.72;margin-top:5px}
+.gact{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.gbtn{display:inline-flex;align-items:center;justify-content:center;height:30px;padding:0 13px;
+  border-radius:15px;border:1px solid #c9b899;background:#fffdf8;color:#8a4b2a!important;
+  font-size:12px;text-decoration:none}
+.gbtn:active{background:#8a4b2a;color:#fff!important}
+.gbtn.soon{border-color:#e6dfd1;background:#faf7f1;color:#a29887!important}
+.gact .fbtn{height:30px;min-width:0;padding:0 13px;font-size:12px;border-radius:15px}
 .shopm{display:flex;flex-direction:column;gap:8px}
 .shopm a{background:#fffdf9;border:1px solid #e0d5bf;border-radius:10px;padding:11px 13px;text-decoration:none}
 .shopm b{display:block;font-size:14px;color:#8a4b2a;font-weight:600}
@@ -196,6 +216,17 @@ nav.tab a.on svg{stroke-width:2}
     <div class="row"><i>8 个公众号</i><i>53 种碑帖</i><i>49 位书家</i><i>2022—2026</i><i>30,561 位关注者</i></div>
   </div>
   <div class="sub" style="margin-top:10px">八个书法号，串成一条<b>从硬笔入门到创作展示</b>的学书路径。点一段，直接看这段的文章。</div>
+
+  <h3 style="margin-top:14px">云昍集团</h3>
+  <div class="gwrap">
+    <div class="gtop">
+      <b>云昍集团</b>
+      <span>以中华文化为核心的跨场景文旅文创平台</span>
+      <em>顶层主体 · 下设四条业务线</em>
+    </div>
+    <div class="gbar"></div>
+    <div class="glist"><div class="gcell"><div class="gcn"><b>云逸书院</b><span>内容</span></div><p>八个书法公众号、3,560 篇历史文章，串成一条从硬笔入门到创作展示的学书路径。</p><div class="gact"><a class="gbtn" href="javascript:void(0)" data-go=".lane">进入学书动线 ↓</a></div></div><div class="gcell"><div class="gcn"><b>云逸昍朤工作室</b><span>个人 IP 衍生</span></div><p>以「昍朤」个人字号衍生的作品、题字与联名，是集团的个人 IP 母体。</p><div class="gact"><a class="gbtn soon" href="javascript:void(0)" data-soon="云逸昍朤工作室">云逸昍朤工作室</a></div></div><div class="gcell"><div class="gcn"><b>农庄</b><span>线下体验</span></div><p>田间临帖、拓片手作、古木题字——来云昍集团农庄走一趟，把纸上的功夫落到地面上。</p><div class="gact"><a class="fbtn soon" href="javascript:void(0)" data-soon="农庄电话">电话预约</a><a class="fbtn soon" href="javascript:void(0)" data-soon="农庄微信">加微信预约</a></div></div><div class="gcell"><div class="gcn"><b>文创板块</b><span>商品转化</span></div><p>古木书法、方言书法两条线：取老木与乡音入字，一件一拓，一件一故事。</p><div class="gact"><a class="gbtn soon" href="javascript:void(0)" data-soon="古木书法">古木书法</a><a class="gbtn soon" href="javascript:void(0)" data-soon="方言书法">方言书法</a></div></div></div>
+  </div>
 
   <h3>学书动线</h3>
   <div class="lane" id="lane"></div>
@@ -496,6 +527,13 @@ function fbCopy(v){
   document.body.removeChild(ta);
 }
 document.addEventListener('click', function(e){
+  var g = e.target.closest('[data-go]');
+  if(g){
+    e.preventDefault();
+    var el = document.querySelector(g.dataset.go);
+    if(el) el.scrollIntoView({block:'start', behavior:'smooth'});
+    return;
+  }
   var s = e.target.closest('[data-soon]');
   if(s){ e.preventDefault(); toast(s.dataset.soon + ' 即将上线，可先电话或加微信联系我们'); return; }
   var c = e.target.closest('[data-copy]');
