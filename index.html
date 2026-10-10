@@ -262,6 +262,30 @@ input[type=search]{flex:1;min-width:200px}
 .mark b{font-size:13.5px;color:#8a4b2a;font-weight:600;letter-spacing:.5px}
 .mark p{font-size:12.8px;color:#6b6055;margin-top:3px}
 
+/* ---- 扫码 · 分享 ---- */
+.qrbox{display:flex;align-items:center;gap:30px;background:#fff;border:1px solid #e6dfd1;
+  border-radius:10px;padding:22px 26px;flex-wrap:wrap}
+.qrcode{flex:none;width:212px;max-width:100%;background:#faf2da;border:1px solid #e9e0ca;
+  border-radius:9px;padding:7px}
+.qrcode img{display:block;width:100%;height:auto;border-radius:5px}
+.qrtxt{flex:1;min-width:260px}
+.qrtxt > b{display:block;font-size:17px;letter-spacing:1px;color:#2b2620;margin-bottom:8px}
+.qrtxt p{margin:0 0 14px;font-size:13.5px;color:#5c5348;line-height:1.85}
+.qrurl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}
+.qrurl code{font-family:ui-monospace,Consolas,Menlo,monospace;font-size:12.5px;color:#8a4b2a;
+  background:#faf6ee;border:1px solid #ecdfcb;border-radius:6px;padding:6px 11px;
+  overflow-wrap:anywhere;min-width:0}
+.qrbtn{flex:none;border:1px solid #8a4b2a;background:#8a4b2a;color:#fff;font-size:12.5px;
+  padding:7px 15px;border-radius:6px;cursor:pointer;font-family:inherit;letter-spacing:.5px}
+.qrbtn:hover{background:#753d20;border-color:#753d20}
+.qrtip{margin-top:11px;font-size:12px;color:#a29887;line-height:1.7}
+@media(max-width:760px){
+  /* 窄屏改为上下堆叠：flex 下二维码限宽 250 后仍会跟文字挤同一行，
+     会把文字压到 40px 宽、把按钮顶出屏幕，故直接切块级布局。 */
+  .qrbox{display:block;padding:18px}
+  .qrcode{width:auto;max-width:250px;margin:0 auto 18px}
+  .qrtxt{min-width:0}
+}
 footer{padding:40px 0 54px;text-align:center;color:#a29887;font-size:12px;line-height:2}
 footer b{color:#8a4b2a;font-weight:600}
 @media(max-width:640px){
@@ -408,6 +432,23 @@ footer b{color:#8a4b2a;font-weight:600}
   <div class="examcta"><div class="ecl"><b>这份沿革只是摘要</b><span>逐年大事、临习与创作脉络、展览与活动，见<b>云逸书院书法年谱</b>。</span></div><a class="ebtn big" href="https://4m66tta4m3zcc.doubaoapps.com/app/app_17fbepqs7t2" target="_blank" rel="noopener">查看完整年谱 →</a></div>
 </div></section>
 
+<section id="qr"><div class="wrap">
+  <h2>扫码 · 分享</h2>
+  <div class="h2sub">把这一页分享给同好——微信里直接扫码进线上学书门户；桌面端可点右侧按钮复制链接，粘贴到微信即可转发。</div>
+  <div class="qrbox">
+    <div class="qrcode"><img src="qr.png" alt="云逸书院 · 线上学书门户 二维码"
+      width="648" height="648" loading="lazy" decoding="async"></div>
+    <div class="qrtxt">
+      <b>云逸书院 · 线上学书门户</b>
+      <p>八个书法公众号、<b>53,130</b> 篇历史文章，串成一条从硬笔入门到创作展示的学书路径。
+        书画考级、书院年谱、墨池投稿、文创作品与农庄预约，入口都在这一页。</p>
+      <div class="qrurl"><code>https://xiebaiyun.github.io/yunyi-portal/</code><button class="qrbtn" type="button"
+        data-copy="https://xiebaiyun.github.io/yunyi-portal/" data-copy-label="链接">复制链接</button></div>
+      <div class="qrtip">二维码可长按或右键保存，用于海报、名片与线下物料；对外发出的每一张，扫的都是同一个门户。</div>
+    </div>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <div>云逸书院八号内容导览 · 生成于 2026-10-10</div>
   <div>全部 <b>3,560</b> 篇收录文章均附 mp.weixin.qq.com 原文永久链接，点击直达。</div>
@@ -453,24 +494,26 @@ function toast(msg){
   t.textContent = msg; t.classList.add('on');
   clearTimeout(t._tm); t._tm = setTimeout(()=>t.classList.remove('on'), 2400);
 }
-function copyText(v){
-  if(!v){ toast('微信号待补充'); return; }
+function copyText(v, lb){
+  lb = lb || '微信号';
+  if(!v){ toast(lb + '待补充'); return; }
   if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(v).then(()=>toast('微信号已复制：'+v), ()=>fbCopy(v));
-  } else fbCopy(v);
+    navigator.clipboard.writeText(v).then(()=>toast(lb+'已复制：'+v), ()=>fbCopy(v, lb));
+  } else fbCopy(v, lb);
 }
-function fbCopy(v){
+function fbCopy(v, lb){
+  lb = lb || '微信号';
   const ta=document.createElement('textarea'); ta.value=v;
   ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
-  try{ document.execCommand('copy'); toast('微信号已复制：'+v); }
-  catch(e){ toast('微信号：'+v); }
+  try{ document.execCommand('copy'); toast(lb+'已复制：'+v); }
+  catch(e){ toast(lb+'：'+v); }
   document.body.removeChild(ta);
 }
 document.addEventListener('click', e=>{
   const s = e.target.closest('[data-soon]');
   if(s){ e.preventDefault(); toast(s.dataset.soon+' 即将上线，可先电话或加微信联系我们'); return; }
   const c = e.target.closest('[data-copy]');
-  if(c){ e.preventDefault(); copyText(c.dataset.copy); }
+  if(c){ e.preventDefault(); copyText(c.dataset.copy, c.dataset.copyLabel); }
 });
 
 /* ---------- 主检索 ---------- */
