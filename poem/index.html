@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日一诗 · 每日一字｜诗字课 · 云逸书院</title>
+<meta name="description" content="云逸书院「诗字课」：每天一首小学必背古诗，从诗里挑一个字讲透写法。99 期全排期、笔画由简到繁、范写字不重复。">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7f3ea;color:#4a4038;
+ font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+ line-height:1.85;-webkit-text-size-adjust:100%}
+a{color:#8a4b2a;text-decoration:none}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header{background:#fffdf9;border-bottom:1px solid #e6dfd1;padding:30px 0 26px;
+ text-align:center;box-shadow:0 1px 0 rgba(138,75,42,.05)}
+header .kicker{font-size:12px;letter-spacing:4px;color:#b08968;margin-bottom:8px}
+header h1{font-family:"Songti SC","SimSun",serif;font-size:29px;margin:0 0 6px;
+ letter-spacing:3px;color:#8a4b2a;font-weight:600}
+header .sub{font-size:13.5px;color:#8b8175;letter-spacing:1px}
+.back{display:inline-block;margin-top:14px;font-size:12.5px;color:#b08968;
+ border-bottom:1px solid #e0d5bf;padding-bottom:2px}
+section{margin:0 0 34px}
+h2{font-family:"Songti SC","SimSun",serif;font-size:19px;color:#8a4b2a;
+ letter-spacing:2px;margin:38px 0 14px;padding-left:11px;border-left:3px solid #b08968;font-weight:600}
+.card{background:#fffdf9;border:1px solid #e0d5bf;border-radius:10px;padding:20px 22px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:12px;margin-top:6px}
+.meta div{background:#fbf7ef;border:1px solid #ece4d4;border-radius:8px;padding:11px 13px}
+.meta b{display:block;font-size:11.5px;color:#b08968;letter-spacing:1px;margin-bottom:3px;font-weight:600}
+.meta span{font-size:13.5px;color:#4a4038}
+.note{background:#fff8ec;border-left:3px solid #d9a05b;border-radius:0 8px 8px 0;
+ padding:12px 15px;font-size:13px;color:#6b6055;margin-top:14px}
+
+/* 第 1 期样稿 */
+.lesson{background:#fffdf9;border:1px solid #e0d5bf;border-radius:10px;padding:26px 28px}
+.lesson .lk{font-size:11.5px;letter-spacing:3px;color:#b08968;margin-bottom:6px}
+.lesson h3{font-family:"Songti SC","SimSun",serif;font-size:22px;margin:0 0 18px;
+ color:#3d342c;letter-spacing:1px;font-weight:600;line-height:1.5}
+.lesson .lead{font-size:14.5px;color:#5a5046;border-bottom:1px dashed #e6dfd1;
+ padding-bottom:16px;margin-bottom:20px}
+.poem{background:#fbf7ef;border-radius:8px;padding:18px 20px;text-align:center;margin:0 0 6px}
+.poem p{font-family:"Songti SC","SimSun",serif;font-size:18px;color:#3d342c;margin:5px 0;letter-spacing:2px}
+.poem .py{font-size:12px;color:#a29887;letter-spacing:.5px;margin:3px 0 8px}
+.poem .by{font-size:12.5px;color:#8b8175;margin-top:10px;letter-spacing:1px}
+.lesson h4{font-size:15px;color:#8a4b2a;margin:22px 0 9px;letter-spacing:1px;font-weight:600}
+.lesson p{font-size:14px;color:#5a5046;margin:0 0 11px}
+.lesson ul{margin:0 0 12px;padding-left:20px}
+.lesson li{font-size:14px;color:#5a5046;margin-bottom:7px}
+.lesson .big{font-family:"Songti SC","SimSun",serif;font-size:40px;color:#8a4b2a;
+ text-align:center;margin:6px 0 2px;letter-spacing:4px}
+.lesson .cinfo{text-align:center;font-size:12.5px;color:#a29887;margin-bottom:14px}
+.lesson .ph{background:#fbf7ef;border:1px dashed #e0d5bf;border-radius:8px;
+ padding:10px 14px;font-size:12px;color:#a29887;margin:10px 0;text-align:center}
+.lesson .end{border-top:1px dashed #e6dfd1;margin-top:22px;padding-top:16px;
+ font-size:13px;color:#8b8175}
+
+/* 排期表 */
+.tools{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:0 0 12px}
+.tools input{flex:1 1 200px;min-width:0;padding:9px 13px;font-size:13.5px;
+ border:1px solid #e0d5bf;border-radius:8px;background:#fffdf9;color:#4a4038;
+ font-family:inherit;outline:none}
+.tools input:focus{border-color:#b08968}
+.tools .cnt{font-size:12.5px;color:#a29887;flex:none}
+.tbox{background:#fffdf9;border:1px solid #e0d5bf;border-radius:10px;overflow:hidden}
+.tscroll{max-height:620px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{position:sticky;top:0;background:#fbf7ef;color:#8a4b2a;font-size:11.5px;
+ letter-spacing:1px;font-weight:600;text-align:left;padding:10px 11px;
+ border-bottom:1px solid #e6dfd1;white-space:nowrap;z-index:2}
+td{padding:9px 11px;border-bottom:1px solid #f2ece0;vertical-align:top;min-width:0}
+tr:last-child td{border-bottom:none}
+td.i{color:#b08968;font-size:12px;white-space:nowrap;width:44px}
+td.d{color:#8b8175;font-size:12px;white-space:nowrap;width:104px}
+td.d .wd{display:inline-block;margin-left:5px;color:#c0b4a0;font-size:11px}
+td.c{white-space:nowrap;width:78px;text-align:center}
+td.c b{font-family:"Songti SC","SimSun",serif;font-size:19px;color:#8a4b2a;display:block;line-height:1.3}
+td.c span{font-size:10.5px;color:#b8ac97}
+td.n{color:#6b6055;font-size:12.5px;line-height:1.6}
+tr.hide{display:none}
+tbody tr:hover{background:#fdfaf4}
+footer{border-top:1px solid #e6dfd1;margin-top:10px;padding:22px 0 34px;
+ text-align:center;font-size:12px;color:#a29887;line-height:1.9}
+@media(max-width:640px){
+ header h1{font-size:23px;letter-spacing:2px}
+ .wrap{padding:0 14px}
+ .lesson{padding:20px 17px}
+ .lesson h3{font-size:19px}
+ .poem p{font-size:16.5px}
+ td.n{font-size:12px}
+ .tscroll{max-height:520px}
+ td.p{font-size:12.5px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">云逸书院 · 昍朤书法</div>
+    <h1>每日一诗 · 每日一字</h1>
+    <div class="sub">简称「诗字课」　一首必背古诗，一个字，讲透它怎么写</div>
+    <a class="back" href="../">← 回到云逸书院门户</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>栏目说明</h2>
+  <div class="card">
+    <p style="margin:0 0 4px;font-size:14px">语文和书法，本是同根同源。孩子识字，是从字形到读音再到意思；
+    孩子学书，也是从一笔一画到间架结构——<b>认字和写字，从来就是一件事的两面</b>。</p>
+    <p style="margin:0;font-size:14px">所以这个栏目把两件事合成一件：<b>每天读一首诗，从诗里挑一个字，讲透它怎么写。</b></p>
+    <div class="meta">
+      <div><b>频次</b><span>每周 5 期（周一至周五）</span></div>
+      <div><b>时段</b><span>早 7:00–7:30</span></div>
+      <div><b>篇幅</b><span>约 500 字 + 范写图 + 15 秒视频</span></div>
+      <div><b>一轮</b><span>2026-10-12 起 · 99 期 · 约 5 个月</span></div>
+    </div>
+    <div class="note">
+      <b>范写字怎么挑的</b>　99 个字<b>不重复</b>，按「诗眼优先 + 结构典型」选定，
+      排期<b>严格按笔画由少到多</b>（第 2 期起 3 画递增至 13 画），孩子一上来就有成就感。
+      第 1 期特设破例用「鹅」字开篇——最经典的诗配最抓眼的字。
+      笔画数取自规范笔顺数据（简体），「风」是 4 画不是 9 画。
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>第 001 期样稿（2026-10-12 首发）</h2>
+  <div class="lesson">
+    <div class="lk">诗字课 001</div>
+    <h3>七岁写下的第一首诗，从哪个字开始练？</h3>
+    <div class="lead">
+      相传《咏鹅》是骆宾王<b>七岁</b>时写的。七岁的孩子看见白鹅戏水，脱口就成了诗，
+      一千多年后还在被孩子念。所以别小看孩子眼里的世界——他看见的，往往就是最好的。
+      第一期，我们从这首诗、这个字开始。
+    </div>
+
+    <h4>一、今日读诗</h4>
+    <div class="poem">
+      <p>鹅，鹅，鹅，</p>
+      <p>曲项向天歌。</p>
+      <p>白毛浮绿水，</p>
+      <p>红掌拨清波。</p>
+      <div class="py">é é é　qū xiàng xiàng tiān gē　bái máo fú lǜ shuǐ　hóng zhǎng bō qīng bō</div>
+      <div class="by">—— 唐 · 骆宾王《咏鹅》</div>
+    </div>
+    <p><b>这首诗在说什么</b>　一群白鹅弯着长长的脖子，仰头朝天叫唤；
+    雪白的羽毛浮在碧绿的水面上，红红的脚掌在清亮的水波里拨动。</p>
+    <div class="ph">〔配图：白鹅戏水，或谢百云老师以《咏鹅》入书的作品〕</div>
+
+    <h4>二、今日写字</h4>
+    <div class="big">鹅</div>
+    <div class="cinfo">12 画 · 左右结构</div>
+    <p><b>左「我」（7 画）—— 要宽。</b>斜钩是这一半的主笔，从左上斜贯到右下，末端向上出钩。
+    这一笔写软了，整个字就站不住；写得太直，又失了舒展。</p>
+    <p><b>右「鸟」（5 画）—— 要窄长。</b>首撇短，横折钩转折圆润；最下面一横在这里写成<b>提</b>，
+    为的是给左边的「我」让位，两半才不打架。</p>
+    <p><b>笔顺</b>　我：撇 · 横 · 竖钩 · 提 · 斜钩 · 撇 · 点　｜　鸟：撇 · 横折钩 · 点 · 竖折折钩 · 横（末横作提）</p>
+    <p><b>三个易错点</b></p>
+    <ul>
+      <li><b>左右写成一样宽</b> —— 应左宽右窄，右边「鸟」要瘦长才好看。</li>
+      <li><b>斜钩太弯太软</b> —— 斜钩要「挺」，字才有精神。</li>
+      <li><b>底部不齐</b> —— 「我」的撇脚与「鸟」的竖折折钩收笔处大致平齐，字才站稳。</li>
+    </ul>
+    <div class="ph">〔配图：谢百云老师硬笔范写「鹅」——白底，字占九宫格中心〕　〔视频：15 秒〕</div>
+
+    <h4>三、今日一练</h4>
+    <p>在格子里写三遍「鹅」。写完，把《咏鹅》读一遍——看看自己写的这只鹅，脖子是不是也朝着天。</p>
+
+    <div class="end">
+      每日一诗 · 每日一字　周一至周五早 7:00 更新　｜　明天第 002 期：杨万里《小池》，写「小」字。
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>99 期全排期</h2>
+  <div class="tools">
+    <input id="q" type="search" placeholder="搜诗名、作者或范写字（如：鹅、李白、小池）">
+    <span class="cnt" id="cnt"></span>
+  </div>
+  <div class="tbox"><div class="tscroll">
+  <table id="tb">
+    <thead><tr>
+      <th>期</th><th>日期</th><th>诗</th><th>范写字</th><th>讲解要点</th>
+    </tr></thead>
+    <tbody>
+<tr data-ch="鹅" data-st="12" data-po="咏鹅"><td class="i">001</td><td class="d">2026-10-12<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060874&amp;idx=2&amp;sn=65e1a359a2802d20a706a7caec33adb1&amp;chksm=bed3ea0789a463110869eb7e5627a2211424845877124df2cc068b5776059b805036a5aa271e#rd" target="_blank" rel="noopener">骆宾王《咏鹅》</a></td><td class="c"><b>鹅</b><span>12 画</span></td><td class="n">左右结构；「我」部斜钩要舒展有力，「鸟」旁窄长、末横变提</td></tr>
+<tr data-ch="小" data-st="3" data-po="小池"><td class="i">002</td><td class="d">2026-10-13<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=1&amp;sn=7b03f7679aa0f1d2eda534affef71cb4&amp;chksm=bed3ea2089a463362aee33ca4d1bd05a60c3fb73c5de7083ee7893d25d6d2b7a172b6d3d297b#rd" target="_blank" rel="noopener">杨万里《小池》</a></td><td class="c"><b>小</b><span>3 画</span></td><td class="n">独体；中竖带钩，左右两点呼应、左低右高</td></tr>
+<tr data-ch="山" data-st="3" data-po="逢雪宿芙蓉山主人"><td class="i">003</td><td class="d">2026-10-14<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=5&amp;sn=962f3a2f62383a138f69c3212ceea88d&amp;chksm=bed3ea2089a463369fb089e895e502fa44623e10797262de8ddfe7c91b495a61d94c68b3e9a5#rd" target="_blank" rel="noopener">刘长卿《逢雪宿芙蓉山主人》</a></td><td class="c"><b>山</b><span>3 画</span></td><td class="n">独体；中竖最长，竖折的折笔内收，三竖间距匀</td></tr>
+<tr data-ch="川" data-st="3" data-po="望庐山瀑布"><td class="i">004</td><td class="d">2026-10-15<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=8&amp;sn=fb6f9c7916abef7bfc1b28b023e5bf14&amp;chksm=bed3ea3389a4632589097a4afb0577a5a328d97bf1ae5b783aa496ee2098f142a40ecc74aed8#rd" target="_blank" rel="noopener">李白《望庐山瀑布》</a></td><td class="c"><b>川</b><span>3 画</span></td><td class="n">独体；竖撇居中，三笔间距匀，末竖最长</td></tr>
+<tr data-ch="门" data-st="3" data-po="绝句"><td class="i">005</td><td class="d">2026-10-16<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=1&amp;sn=b83782d48b1d39c0711b4acbfc62e014&amp;chksm=bed3eac489a463d2c449e535d085273d05c330bfd8f9fc3605c8602584517ce509935f02fa8a#rd" target="_blank" rel="noopener">杜甫《绝句》</a></td><td class="c"><b>门</b><span>3 画</span></td><td class="n">独体；点居左上，竖要直，横折钩比左竖长</td></tr>
+<tr data-ch="弓" data-st="3" data-po="暮江吟"><td class="i">006</td><td class="d">2026-10-19<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=5&amp;sn=c134e3d508d9b310b3ad1ac8acb3c080&amp;chksm=bed3eadb89a463cdd8ac4001075c8b332a488e8be4c88041456aa74a5ba021d63d4c94e10046#rd" target="_blank" rel="noopener">白居易《暮江吟》</a></td><td class="c"><b>弓</b><span>3 画</span></td><td class="n">独体；三横等距，竖折折钩一笔到底、折角分明</td></tr>
+<tr data-ch="马" data-st="3" data-po="马诗"><td class="i">007</td><td class="d">2026-10-20<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=6&amp;sn=fe743c105e39aa559e27881d63ab19c1&amp;chksm=bed3eaf589a463e3d1fd5e89eae083ea95a4afe42461e3b32bc17faf8106e62a67a38667f0d8#rd" target="_blank" rel="noopener">李贺《马诗》</a></td><td class="c"><b>马</b><span>3 画</span></td><td class="n">独体；横折的折笔内收，竖折折钩一笔到底，末横变提</td></tr>
+<tr data-ch="飞" data-st="3" data-po="出塞"><td class="i">008</td><td class="d">2026-10-21<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=1&amp;sn=4f5f9ecb66b95391638bb96c516588ac&amp;chksm=bed3ea8389a46395af876fb4ffacb620144308750d0138db7e69d9716efd462d6b34fc94741f#rd" target="_blank" rel="noopener">王昌龄《出塞》</a></td><td class="c"><b>飞</b><span>3 画</span></td><td class="n">独体；横折弯钩圆转，撇点呼应，重心平稳</td></tr>
+<tr data-ch="己" data-st="3" data-po="送杜少府之任蜀州"><td class="i">009</td><td class="d">2026-10-22<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=4&amp;sn=5465898d9a0cf3c382b8cc23ec9790dd&amp;chksm=bed3ea8389a46395588ceb761ab8530b1a53cd97021ef1346dea4920b528f51be5a3437b078c#rd" target="_blank" rel="noopener">王勃《送杜少府之任蜀州》</a></td><td class="c"><b>己</b><span>3 画</span></td><td class="n">独体；横折的折笔内收，竖弯钩舒展不封口</td></tr>
+<tr data-ch="女" data-st="3" data-po="乞巧"><td class="i">010</td><td class="d">2026-10-23<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=6&amp;sn=cf9a233fcf8d916a38260376496bc073&amp;chksm=bed3ea9489a463822bc81b3f131b9f7624a7b1f37c15815d2a5ce31e6bc353058d8ee580c7d8#rd" target="_blank" rel="noopener">林杰《乞巧》</a></td><td class="c"><b>女</b><span>3 画</span></td><td class="n">独体；撇点夹角适中，横最长，重心平稳</td></tr>
+<tr data-ch="月" data-st="4" data-po="静夜思"><td class="i">011</td><td class="d">2026-10-26<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060874&amp;idx=5&amp;sn=f68241ee960a469d70c3e9773340f981&amp;chksm=bed3ea0789a463111eba3c89e3fe1b72e84ca3f3c975f30a24cc74e8a8d2deffc99c2ca46a28#rd" target="_blank" rel="noopener">李白《静夜思》</a></td><td class="c"><b>月</b><span>4 画</span></td><td class="n">独体；竖撇带弧，横折钩要直，内两横不贴边</td></tr>
+<tr data-ch="风" data-st="4" data-po="风"><td class="i">012</td><td class="d">2026-10-27<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=6&amp;sn=38bec7a62dffb6796e5e01faf0fe5c58&amp;chksm=bed3ea1889a4630e61aad30aadcd4455319104bd2c3532292f115a557543b271afcbca210242#rd" target="_blank" rel="noopener">李峤《风》</a></td><td class="c"><b>风</b><span>4 画</span></td><td class="n">半包围；撇带弧度，横折弯钩圆转，内撇点呼应</td></tr>
+<tr data-ch="天" data-st="4" data-po="敕勒歌"><td class="i">013</td><td class="d">2026-10-28<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=6&amp;sn=64a836bdbec5e28bfebe7d435ff3a80d&amp;chksm=bed3ea2d89a4633b35cd3de4186cbe7cd07f6d7781880fa3cb31002076c2434ec5db085e2106#rd" target="_blank" rel="noopener">北朝民歌《敕勒歌》</a></td><td class="c"><b>天</b><span>4 画</span></td><td class="n">独体；两横上短下长，撇捺舒展不交叉</td></tr>
+<tr data-ch="牛" data-st="4" data-po="所见"><td class="i">014</td><td class="d">2026-10-29<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=8&amp;sn=d40d8a048e0b64da0361513a6f6f9349&amp;chksm=bed3ea2d89a4633bca58b33cec95393bcfcb41db6faaeaafe2e3499760d50eb7fc6ded17aaac#rd" target="_blank" rel="noopener">袁枚《所见》</a></td><td class="c"><b>牛</b><span>4 画</span></td><td class="n">独体；短撇起笔，长横居中，末竖贯穿垂直</td></tr>
+<tr data-ch="尺" data-st="4" data-po="赠汪伦"><td class="i">015</td><td class="d">2026-10-30<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=6&amp;sn=32df69fc35e7e9c120fec149a9ecfba2&amp;chksm=bed3eac489a463d20b489b93efd119756507e70a9468f56b49facc34b5f2b94b7e18093f07a9#rd" target="_blank" rel="noopener">李白《赠汪伦》</a></td><td class="c"><b>尺</b><span>4 画</span></td><td class="n">独体；横折的横短，撇捺舒展，捺要出脚</td></tr>
+<tr data-ch="日" data-st="4" data-po="元日"><td class="i">016</td><td class="d">2026-11-02<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=1&amp;sn=c2dceecd73b94c5a87511763a991f674&amp;chksm=bed3eadb89a463cd71f2bc56b2a6e747251abffe8bd6841538c96e60801ad1513604e1aa3e18#rd" target="_blank" rel="noopener">王安石《元日》</a></td><td class="c"><b>日</b><span>4 画</span></td><td class="n">独体；字形窄长，中横不贴右，末横封口</td></tr>
+<tr data-ch="中" data-st="4" data-po="题西林壁"><td class="i">017</td><td class="d">2026-11-03<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=2&amp;sn=fb55768800759ce9183e48e4c58c18a6&amp;chksm=bed3eadb89a463cd4071167f9f4271ea8c527e9534537ac398dfd1532343ba6200bd92ec9003#rd" target="_blank" rel="noopener">苏轼《题西林壁》</a></td><td class="c"><b>中</b><span>4 画</span></td><td class="n">独体；「口」扁宽，中竖贯穿垂直且最长</td></tr>
+<tr data-ch="火" data-st="4" data-po="枫桥夜泊"><td class="i">018</td><td class="d">2026-11-04<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=3&amp;sn=7bce895d454a6e2dc50ab5906fc04a45&amp;chksm=bed3eadb89a463cdf305e93cc2c1faf922af86ce4bbf4bba94b76a8c144201f1f0de5711515d#rd" target="_blank" rel="noopener">张继《枫桥夜泊》</a></td><td class="c"><b>火</b><span>4 画</span></td><td class="n">独体；左点低右点高，撇捺舒展对称</td></tr>
+<tr data-ch="开" data-st="4" data-po="望天门山"><td class="i">019</td><td class="d">2026-11-05<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=4&amp;sn=93f16a27a5384ceba68fa8b3d1b7f07b&amp;chksm=bed3eadb89a463cd9aa1fe0bee5ab8828446d19e158884d6e3b40f769335cde82f5c8e8c2383#rd" target="_blank" rel="noopener">李白《望天门山》</a></td><td class="c"><b>开</b><span>4 画</span></td><td class="n">独体；两横上短下长，撇与竖间距匀</td></tr>
+<tr data-ch="云" data-st="4" data-po="别董大"><td class="i">020</td><td class="d">2026-11-06<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=6&amp;sn=12a878bf10202414b223f5aaa1168e47&amp;chksm=bed3eadb89a463cdc52be12ef8e5636bc9e451a166e080a756ebe39bd5897118f46ba008c414#rd" target="_blank" rel="noopener">高适《别董大》</a></td><td class="c"><b>云</b><span>4 画</span></td><td class="n">上下；两横上短下长，「厶」转折圆润</td></tr>
+<tr data-ch="水" data-st="4" data-po="六月二十七日望湖楼醉书"><td class="i">021</td><td class="d">2026-11-09<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=8&amp;sn=ed968e0717a96ca0444e1adfaad96194&amp;chksm=bed3eadb89a463cd6b6f2a1ec01634a2f3cbe13d3951c99e1281fe5343e9c955999c36497fa2#rd" target="_blank" rel="noopener">苏轼《六月二十七日望湖楼醉书》</a></td><td class="c"><b>水</b><span>4 画</span></td><td class="n">独体；中竖带钩，横撇不接中竖，右捺舒展</td></tr>
+<tr data-ch="木" data-st="4" data-po="登高"><td class="i">022</td><td class="d">2026-11-10<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=3&amp;sn=1e909e673eec982af02df64e87b9c517&amp;chksm=bed3ea8389a46395e26ed2b8dde5e4090730768553fb3a6e1fbce51d6555f62db8abb824b292#rd" target="_blank" rel="noopener">杜甫《登高》</a></td><td class="c"><b>木</b><span>4 画</span></td><td class="n">独体；横短竖长，撇捺舒展对称且不低于竖脚</td></tr>
+<tr data-ch="车" data-st="4" data-po="乐游原"><td class="i">023</td><td class="d">2026-11-11<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=3&amp;sn=841797bdd035397a317b6d79c0911637&amp;chksm=bed3ea9489a463828c8b6d3d4c7a74fbd4d7e032580ba0df93c5a5a38d8c8c4a5fa6b7d92691#rd" target="_blank" rel="noopener">李商隐《乐游原》</a></td><td class="c"><b>车</b><span>4 画</span></td><td class="n">独体；横短，竖贯穿垂直，末横最长</td></tr>
+<tr data-ch="白" data-st="5" data-po="登鹳雀楼"><td class="i">024</td><td class="d">2026-11-12<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=4&amp;sn=60b66981566160d774dbcaf62e4c17af&amp;chksm=bed3ea1889a4630e2594fd22b4dfbd6c43a9e4fdce6959efea78846087ef8909d7c33a148820#rd" target="_blank" rel="noopener">王之涣《登鹳雀楼》</a></td><td class="c"><b>白</b><span>5 画</span></td><td class="n">独体；字形勿宽，中横居中，末横封口</td></tr>
+<tr data-ch="田" data-st="5" data-po="悯农"><td class="i">025</td><td class="d">2026-11-13<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=7&amp;sn=00b1d4900373b12ce555be598bc19b0e&amp;chksm=bed3ea1889a4630e84308d0fc3934e471abc834800dab4c4b694d28910d02dd9d8053dc30c5a#rd" target="_blank" rel="noopener">李绅《悯农》</a></td><td class="c"><b>田</b><span>5 画</span></td><td class="n">独体；上宽下窄，十字居中，四格匀称</td></tr>
+<tr data-ch="鸟" data-st="5" data-po="鸟"><td class="i">026</td><td class="d">2026-11-16<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=6&amp;sn=e99445ae9b12f9699cda7273396d1bc6&amp;chksm=bed3ea2089a463360e2ff4784576934728fbc99ef679474628c747c99907ab8caf7d0df9b97f#rd" target="_blank" rel="noopener">白居易《鸟》</a></td><td class="c"><b>鸟</b><span>5 画</span></td><td class="n">独体；撇短，横折钩圆转，末横偏左不封死</td></tr>
+<tr data-ch="石" data-st="5" data-po="山行"><td class="i">027</td><td class="d">2026-11-17<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=7&amp;sn=263c9f989b72561d425478d5d2464eb0&amp;chksm=bed3ea3389a4632565cf3a9b6c398adc99c547a8b993270dfb4748872e8d7c63491cd4ed0d7c#rd" target="_blank" rel="noopener">杜牧《山行》</a></td><td class="c"><b>石</b><span>5 画</span></td><td class="n">独体；横短撇长，「口」扁宽偏下</td></tr>
+<tr data-ch="兄" data-st="5" data-po="九月九日忆山东兄弟"><td class="i">028</td><td class="d">2026-11-18<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=2&amp;sn=58140298a91ff19f9ec54ac36f04d4a5&amp;chksm=bed3eac489a463d2f063f64bdc1b80ebd75394922b86effde3fb373474e4f1f908b750b7f963#rd" target="_blank" rel="noopener">王维《九月九日忆山东兄弟》</a></td><td class="c"><b>兄</b><span>5 画</span></td><td class="n">上下；「口」扁宽，「儿」撇短、竖弯钩舒展</td></tr>
+<tr data-ch="玉" data-st="5" data-po="古朗月行"><td class="i">029</td><td class="d">2026-11-19<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060962&amp;idx=8&amp;sn=e556731d50ae6fd606319739180e4934&amp;chksm=bed3eaef89a463f9f119a492c6b1a8fc7f2bf7114ff224b8e8577e5a905e25f5d46a4b400587#rd" target="_blank" rel="noopener">李白《古朗月行》</a></td><td class="c"><b>玉</b><span>5 画</span></td><td class="n">独体；三横等距，中横最短，末横最长，点居右下</td></tr>
+<tr data-ch="母" data-st="5" data-po="游子吟"><td class="i">030</td><td class="d">2026-11-20<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=7&amp;sn=f4ec8fda6b040ffa766df14613c405cb&amp;chksm=bed3eaf589a463e3a58b203b1b3821e0df00f5e0e06a50a4b10154b0a717996f1c48bcba0b15#rd" target="_blank" rel="noopener">孟郊《游子吟》</a></td><td class="c"><b>母</b><span>5 画</span></td><td class="n">独体；竖折与横折钩交叉，中横最长，两点呼应</td></tr>
+<tr data-ch="可" data-st="5" data-po="江南"><td class="i">031</td><td class="d">2026-11-23<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=5&amp;sn=3dafaa586ae135336294f3c700225c5b&amp;chksm=bed3ea8389a46395d9d1a93d10fea5a36812cbc0b4f8faca3e5709e57ef875ca30abbc288bee#rd" target="_blank" rel="noopener">汉乐府《江南》</a></td><td class="c"><b>可</b><span>5 画</span></td><td class="n">半包围；横长，「口」扁宽偏上，竖钩居中</td></tr>
+<tr data-ch="寺" data-st="6" data-po="夜宿山寺"><td class="i">032</td><td class="d">2026-11-24<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=8&amp;sn=37c4f4ada5d61f06705bb9e31108e1b5&amp;chksm=bed3ea1889a4630ee7e8c6e5b21c750e616e7bfca51381b84528ee902c9e12ed0e8c1095dede#rd" target="_blank" rel="noopener">李白《夜宿山寺》</a></td><td class="c"><b>寺</b><span>6 画</span></td><td class="n">上下；「土」竖与「寸」竖钩对准同一中线</td></tr>
+<tr data-ch="池" data-st="6" data-po="池上"><td class="i">033</td><td class="d">2026-11-25<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=4&amp;sn=761fac73c7abefef161c8c7baa8e8838&amp;chksm=bed3ea2d89a4633b3d77930d2c1130d4e049888f2767fdbe6364dbbd9f8e306ee36f3498991f#rd" target="_blank" rel="noopener">白居易《池上》</a></td><td class="c"><b>池</b><span>6 画</span></td><td class="n">左右；三点水弧形，「也」部竖弯钩舒展</td></tr>
+<tr data-ch="江" data-st="6" data-po="宿建德江"><td class="i">034</td><td class="d">2026-11-26<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=4&amp;sn=73e6e0ee649107bf06b1a33ec638c5db&amp;chksm=bed3ea3389a46325388efb61c42824fa743b26fb15ace5cf619741c225507adc9493b7dbc8dc#rd" target="_blank" rel="noopener">孟浩然《宿建德江》</a></td><td class="c"><b>江</b><span>6 画</span></td><td class="n">左右；三点水弧形，「工」两横上短下长</td></tr>
+<tr data-ch="舟" data-st="6" data-po="早发白帝城"><td class="i">035</td><td class="d">2026-11-27<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=6&amp;sn=b2d478146d8bcb9a901cd5a96eddf810&amp;chksm=bed3ea3389a46325268928f83d96e944aef3b0ac8f65480ff039edf9e11906af7d4b541ebd92#rd" target="_blank" rel="noopener">李白《早发白帝城》</a></td><td class="c"><b>舟</b><span>6 画</span></td><td class="n">独体；首撇短，框窄长，中横两边出头</td></tr>
+<tr data-ch="竹" data-st="6" data-po="竹枝词"><td class="i">036</td><td class="d">2026-11-30<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=3&amp;sn=fd321c78178c4e0d4bcafd65ad1ce62f&amp;chksm=bed3eac489a463d257cacf11ca4c57eaf75806a95c125ea0a6fe21bd22ada98ce92403bb7c15#rd" target="_blank" rel="noopener">刘禹锡《竹枝词》</a></td><td class="c"><b>竹</b><span>6 画</span></td><td class="n">左右；左小右大，两撇平行，竖钩垂直</td></tr>
+<tr data-ch="回" data-st="6" data-po="回乡偶书"><td class="i">037</td><td class="d">2026-12-01<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=4&amp;sn=5ee09e55f8264e2ed0baca5c84ee043d&amp;chksm=bed3eac489a463d2948ff0224262c70342f9b8bb0ac4b429058f2fd83c49f14fc613f8567802#rd" target="_blank" rel="noopener">贺知章《回乡偶书》</a></td><td class="c"><b>回</b><span>6 画</span></td><td class="n">全包围；外框方正，内「口」居中偏上</td></tr>
+<tr data-ch="帆" data-st="6" data-po="黄鹤楼送孟浩然之广陵"><td class="i">038</td><td class="d">2026-12-02<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=7&amp;sn=27e1ac6c34b58daaca1f8c151e4e7797&amp;chksm=bed3eac489a463d22f4527cda3dc11ff051063a4c3d25c1b79b17401daf6ab530a5955305777#rd" target="_blank" rel="noopener">李白《黄鹤楼送孟浩然之广陵》</a></td><td class="c"><b>帆</b><span>6 画</span></td><td class="n">左右；「巾」旁窄长，「凡」撇带弧、点居中</td></tr>
+<tr data-ch="灯" data-st="6" data-po="舟夜书所见"><td class="i">039</td><td class="d">2026-12-03<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060962&amp;idx=5&amp;sn=60892e70b4dbb1036d1dad2f233ba62f&amp;chksm=bed3eaef89a463f953b4628ff1ffc7ab22fe228ad9d477a9bc771ba7ded925d886775b099a6d#rd" target="_blank" rel="noopener">查慎行《舟夜书所见》</a></td><td class="c"><b>灯</b><span>6 画</span></td><td class="n">左右；火字旁末捺变点，「丁」横长竖钩稳</td></tr>
+<tr data-ch="好" data-st="6" data-po="忆江南"><td class="i">040</td><td class="d">2026-12-04<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060962&amp;idx=6&amp;sn=73637c9d5d6b39137bb2e13f8a76296c&amp;chksm=bed3eaef89a463f9611a2aba2ce7404b1c3b8071e7e2b9b3dd21e25ae1fede2da9989fba7f5e#rd" target="_blank" rel="noopener">白居易《忆江南》</a></td><td class="c"><b>好</b><span>6 画</span></td><td class="n">左右；「女」旁横变提让右，「子」弯钩对准</td></tr>
+<tr data-ch="衣" data-st="6" data-po="渔歌子"><td class="i">041</td><td class="d">2026-12-07<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060962&amp;idx=7&amp;sn=6f6ec47bcf53d9277febc096b2641be9&amp;chksm=bed3eaef89a463f995315ff6299d0634d0e6c14e8dc32a44acf8e6b948badbd94fc56b1a78d6#rd" target="_blank" rel="noopener">张志和《渔歌子》</a></td><td class="c"><b>衣</b><span>6 画</span></td><td class="n">独体；点居中，横短撇长，竖提要直，捺舒展</td></tr>
+<tr data-ch="关" data-st="6" data-po="游园不值"><td class="i">042</td><td class="d">2026-12-08<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=4&amp;sn=fcadd99cb48b2ab0a75434bd8d50fb84&amp;chksm=bed3eaf589a463e34b950c6406756eea3278e2f9c924a5345fad37f869c0d71a958732922cba#rd" target="_blank" rel="noopener">叶绍翁《游园不值》</a></td><td class="c"><b>关</b><span>6 画</span></td><td class="n">上下；两点呼应，「天」撇捺舒展</td></tr>
+<tr data-ch="冰" data-st="6" data-po="芙蓉楼送辛渐"><td class="i">043</td><td class="d">2026-12-09<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=6&amp;sn=0dd63f027b8eb9f2088e4bc263b3cd14&amp;chksm=bed3ea8389a463950b5bba6fb7f4599cab3a22863261d20bed1245050644f86100fa545be5b3#rd" target="_blank" rel="noopener">王昌龄《芙蓉楼送辛渐》</a></td><td class="c"><b>冰</b><span>6 画</span></td><td class="n">左右；两点水上下呼应，「水」中竖带钩</td></tr>
+<tr data-ch="红" data-st="6" data-po="春日"><td class="i">044</td><td class="d">2026-12-10<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=7&amp;sn=2ce03b82b610da60fc255201afcce2d3&amp;chksm=bed3eaa989a463bf574f926c7b5857c97fdb6ffe98554f66d06a6c70128ab69e733dc5bae970#rd" target="_blank" rel="noopener">朱熹《春日》</a></td><td class="c"><b>红</b><span>6 画</span></td><td class="n">左右；绞丝旁窄长，「工」两横上短下长</td></tr>
+<tr data-ch="阴" data-st="6" data-po="三衢道中"><td class="i">045</td><td class="d">2026-12-11<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=8&amp;sn=420ff3e0f05f593a1572d22ce872af33&amp;chksm=bed3eaa989a463bfa2244fbac057784b91f6c7a3d5817d936144a95df482018c1ce227292e50#rd" target="_blank" rel="noopener">曾几《三衢道中》</a></td><td class="c"><b>阴</b><span>6 画</span></td><td class="n">左右；左耳旁窄长，「月」部框窄长</td></tr>
+<tr data-ch="休" data-st="6" data-po="题临安邸"><td class="i">046</td><td class="d">2026-12-14<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061040&amp;idx=1&amp;sn=b29bd54c1a97dc9b3290d938e901b3c1&amp;chksm=bed3eabd89a463abd480925c2c4d1cdaddd54115b3095dcae2cbb7c303c69c17c87caaafe83d#rd" target="_blank" rel="noopener">林升《题临安邸》</a></td><td class="c"><b>休</b><span>6 画</span></td><td class="n">左右；「人」旁捺变点，「木」捺舒展</td></tr>
+<tr data-ch="里" data-st="7" data-po="山村咏怀"><td class="i">047</td><td class="d">2026-12-15<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=1&amp;sn=eb0513a0b8db97050eaac33f29d9ce15&amp;chksm=bed3ea1889a4630ee109cfbee163b8f84ef4a4d9645b795655e344fdcdef0f3dffdd72d38cbf#rd" target="_blank" rel="noopener">邵雍《山村咏怀》</a></td><td class="c"><b>里</b><span>7 画</span></td><td class="n">上下；「田」上宽下窄，末横最长托底</td></tr>
+<tr data-ch="村" data-st="7" data-po="村居"><td class="i">048</td><td class="d">2026-12-16<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=2&amp;sn=652b17195d76b66f99e48a8075108390&amp;chksm=bed3ea2089a463364e0f863051cf594908f58f0298e7b94f7a33f81d97f164aeeedc96155f75#rd" target="_blank" rel="noopener">高鼎《村居》</a></td><td class="c"><b>村</b><span>7 画</span></td><td class="n">左右；「木」旁捺变点，「寸」竖钩对准</td></tr>
+<tr data-ch="花" data-st="7" data-po="江畔独步寻花"><td class="i">049</td><td class="d">2026-12-17<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=4&amp;sn=4efeb3ab66bea5748ee6d6425c3b34ef&amp;chksm=bed3ea2089a46336ba06eaf6fca88e555adf9a9d7d151ec85d35828c47d507d0690d4a4745ea#rd" target="_blank" rel="noopener">杜甫《江畔独步寻花》</a></td><td class="c"><b>花</b><span>7 画</span></td><td class="n">上下；草字头两竖内收，「化」竖弯钩舒展</td></tr>
+<tr data-ch="麦" data-st="7" data-po="四时田园杂兴·其二"><td class="i">050</td><td class="d">2026-12-18<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=5&amp;sn=9472ef66f67bebdb2845358dfec1b881&amp;chksm=bed3ea3389a46325938d9e6839d411695499ff0dcf799eb515622b6f06823772c8083cbbdf51#rd" target="_blank" rel="noopener">范成大《四时田园杂兴·其二》</a></td><td class="c"><b>麦</b><span>7 画</span></td><td class="n">上下；上部三横等距，「夂」撇捺舒展</td></tr>
+<tr data-ch="芦" data-st="7" data-po="惠崇春江晚景"><td class="i">051</td><td class="d">2026-12-21<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=8&amp;sn=f34e2eb7e8987eb75db24477a2b13524&amp;chksm=bed3eac489a463d25fdf8b31b2c90e180d43f34768fbd099d29f89e72977005ff65002ab8e96#rd" target="_blank" rel="noopener">苏轼《惠崇春江晚景》</a></td><td class="c"><b>芦</b><span>7 画</span></td><td class="n">上下；草字头两竖内收，「户」撇舒展</td></tr>
+<tr data-ch="坚" data-st="7" data-po="竹石"><td class="i">052</td><td class="d">2026-12-22<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=2&amp;sn=ce49c92f3a5e6a68320de8633a05fcc8&amp;chksm=bed3ea8e89a46398a858609386d9e9b9c1e4ef685e0fc93a5de408788f9e8b6b1839b650956b#rd" target="_blank" rel="noopener">郑燮《竹石》</a></td><td class="c"><b>坚</b><span>7 画</span></td><td class="n">上下；上部左收右放，「土」底横最长</td></tr>
+<tr data-ch="君" data-st="7" data-po="送元二使安西"><td class="i">053</td><td class="d">2026-12-23<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=5&amp;sn=7c74268a1e07c694b89ab715e2dc3342&amp;chksm=bed3ea8e89a463989c854136fc1543297c418fd268799e46e58e6cc1098d781b3e252ba6cb59#rd" target="_blank" rel="noopener">王维《送元二使安西》</a></td><td class="c"><b>君</b><span>7 画</span></td><td class="n">上下；三横等距，「口」扁宽，尹部撇贯穿</td></tr>
+<tr data-ch="豆" data-st="7" data-po="七步诗"><td class="i">054</td><td class="d">2026-12-24<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=8&amp;sn=179880682d9446978654ae5fadb72a69&amp;chksm=bed3ea8e89a46398e8320247457d17e7b291b767598e08081afa42f2a95b0ab257667c5c6e33#rd" target="_blank" rel="noopener">曹植《七步诗》</a></td><td class="c"><b>豆</b><span>7 画</span></td><td class="n">上下；首横短，「口」扁，末横最长托底</td></tr>
+<tr data-ch="园" data-st="7" data-po="逢入京使"><td class="i">055</td><td class="d">2026-12-25<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=8&amp;sn=ac4417e9bc63b9f5b94fec687ff47739&amp;chksm=bed3ea8389a4639544be248a9fba3867ea48c585ad564487d09534a6de061272cfd557f175bb#rd" target="_blank" rel="noopener">岑参《逢入京使》</a></td><td class="c"><b>园</b><span>7 画</span></td><td class="n">全包围；外框方正，「元」居中，撇短竖弯钩舒展</td></tr>
+<tr data-ch="沙" data-st="7" data-po="浪淘沙"><td class="i">056</td><td class="d">2026-12-28<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=2&amp;sn=7bf95acae7b2783ef2c1b354d74615bc&amp;chksm=bed3ea9489a46382355e7524979a7bea6091bf68a3eb3c6692bd97e4f86d12fa2c81fdb37119#rd" target="_blank" rel="noopener">刘禹锡《浪淘沙》</a></td><td class="c"><b>沙</b><span>7 画</span></td><td class="n">左右；三点水弧形，「少」竖居中、撇长</td></tr>
+<tr data-ch="丽" data-st="7" data-po="绝句·迟日江山丽"><td class="i">057</td><td class="d">2026-12-29<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=4&amp;sn=04e3ec1eabbd9aeeab57fc027559dadc&amp;chksm=bed3ea9489a4638216bcafa7c2c5ea6f591c988b7b228623ef99c8cef305490a42316fcbb152#rd" target="_blank" rel="noopener">杜甫《绝句·迟日江山丽》</a></td><td class="c"><b>丽</b><span>7 画</span></td><td class="n">上下；首横长，两个「月」左右等分，末点呼应</td></tr>
+<tr data-ch="雨" data-st="8" data-po="清明"><td class="i">058</td><td class="d">2026-12-30<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060874&amp;idx=3&amp;sn=971498a6b445616f952b7d69025760c3&amp;chksm=bed3ea0789a46311f7ecc217d99476af76dd7461bf714ee167669d6508130d802f5b311857f9#rd" target="_blank" rel="noopener">杜牧《清明》</a></td><td class="c"><b>雨</b><span>8 画</span></td><td class="n">独体；首横短，框形上宽下窄，四点分布均匀</td></tr>
+<tr data-ch="河" data-st="8" data-po="凉州词"><td class="i">059</td><td class="d">2026-12-31<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060874&amp;idx=6&amp;sn=6137e703b181280b1bc6603a1361daa1&amp;chksm=bed3ea0789a46311afff2b4b8de0a6a0d127ea6ce37224efd5528470b22d1ee67e94678d5e3a#rd" target="_blank" rel="noopener">王之涣《凉州词》</a></td><td class="c"><b>河</b><span>8 画</span></td><td class="n">左右；三点水呈弧形呼应，「可」部口要正、竖钩居中</td></tr>
+<tr data-ch="松" data-st="8" data-po="寻隐者不遇"><td class="i">060</td><td class="d">2027-01-01<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=2&amp;sn=ed65a2a4ebe531dad109ad87c54fc54c&amp;chksm=bed3ea1889a4630e6a29c784e371086aa31d2a51585b29ba2e9f83c950fca1caad9d53f1b6b7#rd" target="_blank" rel="noopener">贾岛《寻隐者不遇》</a></td><td class="c"><b>松</b><span>8 画</span></td><td class="n">左右；「木」旁捺变点，「公」撇捺对称</td></tr>
+<tr data-ch="鱼" data-st="8" data-po="江上渔者"><td class="i">061</td><td class="d">2027-01-04<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=3&amp;sn=6431c0dadfa2ecdd18e63a0d4d89e7af&amp;chksm=bed3ea2089a46336ada1b44525d8cc46089c60f5fcf1bf07af3c7cdfbba96b79990a72a26472#rd" target="_blank" rel="noopener">范仲淹《江上渔者》</a></td><td class="c"><b>鱼</b><span>8 画</span></td><td class="n">上下；撇刀头小，「田」扁宽，末横托底</td></tr>
+<tr data-ch="林" data-st="8" data-po="鹿柴"><td class="i">062</td><td class="d">2027-01-05<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=7&amp;sn=3b9f3be74b3f03b451e12f0afd74e2ec&amp;chksm=bed3ea2089a46336726a37f0acecbe5497bac497bcb31093f897620ad90408d3ae0c3047e9c6#rd" target="_blank" rel="noopener">王维《鹿柴》</a></td><td class="c"><b>林</b><span>8 画</span></td><td class="n">左右；左「木」捺变点让右，右「木」捺舒展</td></tr>
+<tr data-ch="钓" data-st="8" data-po="小儿垂钓"><td class="i">063</td><td class="d">2027-01-06<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=2&amp;sn=1bca055ec9c59f49ecd83fce186a1fff&amp;chksm=bed3ea3389a463252393df6c88a635b7c2691a95da6b7cc5253eacd4691919fa9840b86a123c#rd" target="_blank" rel="noopener">胡令能《小儿垂钓》</a></td><td class="c"><b>钓</b><span>8 画</span></td><td class="n">左右；金字旁窄长，「勺」撇短、横折钩圆转</td></tr>
+<tr data-ch="苔" data-st="8" data-po="书湖阴先生壁"><td class="i">064</td><td class="d">2027-01-07<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060950&amp;idx=7&amp;sn=d0858e39d7489cf251b19286bbbd9212&amp;chksm=bed3eadb89a463cd90e9809e54e53b524953e13f273d97940b3212fc2133d81aac9d523324b1#rd" target="_blank" rel="noopener">王安石《书湖阴先生壁》</a></td><td class="c"><b>苔</b><span>8 画</span></td><td class="n">上下；草字头扁宽，「台」口扁、底部托稳</td></tr>
+<tr data-ch="奇" data-st="8" data-po="饮湖上初晴后雨"><td class="i">065</td><td class="d">2027-01-08<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=3&amp;sn=b4fe16692c5a0ffa0fe66429f12206eb&amp;chksm=bed3eaf589a463e3a0e8ba7964c8eed1ac6b85afa0803ea9a4fa91b806943b2da9e69ff060a8#rd" target="_blank" rel="noopener">苏轼《饮湖上初晴后雨》</a></td><td class="c"><b>奇</b><span>8 画</span></td><td class="n">上下；「大」撇捺舒展盖下，「可」口要正</td></tr>
+<tr data-ch="夜" data-st="8" data-po="春夜喜雨"><td class="i">066</td><td class="d">2027-01-11<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=7&amp;sn=ec1010b43280f84ddee7862877fef179&amp;chksm=bed3ea8389a46395c87e8c6cb4662fab6fb002b75bedac2ff77e9beb13bfb513f84538f2a848#rd" target="_blank" rel="noopener">杜甫《春夜喜雨》</a></td><td class="c"><b>夜</b><span>8 画</span></td><td class="n">上下；点居中，撇捺舒展，「夂」捺要出脚</td></tr>
+<tr data-ch="青" data-st="8" data-po="望洞庭"><td class="i">067</td><td class="d">2027-01-12<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=5&amp;sn=150c180317d5f54f2479b107febab438&amp;chksm=bed3ea9489a463826863ffbbfa90a479c4cc9e1482ec4befc62a69eb7783ab7b5453e93d0549#rd" target="_blank" rel="noopener">刘禹锡《望洞庭》</a></td><td class="c"><b>青</b><span>8 画</span></td><td class="n">上下；三横等距，「月」部竖撇变竖、框窄长</td></tr>
+<tr data-ch="杰" data-st="8" data-po="夏日绝句"><td class="i">068</td><td class="d">2027-01-13<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=8&amp;sn=0fa77c1fe05c2a0bfac6eee1a0719d87&amp;chksm=bed3ea9489a4638283da6b46a2630ea23e2eced0306c87d287abbfd930661694ccca1634fc16#rd" target="_blank" rel="noopener">李清照《夏日绝句》</a></td><td class="c"><b>杰</b><span>8 画</span></td><td class="n">上下；「木」竖短，四点底分布均匀、首尾呼应</td></tr>
+<tr data-ch="国" data-st="8" data-po="春望"><td class="i">069</td><td class="d">2027-01-14<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=2&amp;sn=3b508d3231a89d2b27609ab64d6a3495&amp;chksm=bed3eaa989a463bf5596efd9902394f135fe1b105e0792207506bd5ff8d88addbb3cd7d2dbb1#rd" target="_blank" rel="noopener">杜甫《春望》</a></td><td class="c"><b>国</b><span>8 画</span></td><td class="n">全包围；外框方正，「玉」居中，点不漏</td></tr>
+<tr data-ch="泪" data-st="8" data-po="秋夜将晓出篱门迎凉有感"><td class="i">070</td><td class="d">2027-01-15<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=5&amp;sn=d35ea5850b9c57e07de601e4e6c3b5cd&amp;chksm=bed3eaa989a463bfe39392e5415c5f052d4592f1eea78c2fa0b8f00530bd9e30a07795cbaacb#rd" target="_blank" rel="noopener">陆游《秋夜将晓出篱门迎凉有感》</a></td><td class="c"><b>泪</b><span>8 画</span></td><td class="n">左右；三点水弧形，「目」窄长、三横等距</td></tr>
+<tr data-ch="秋" data-st="9" data-po="山居秋暝"><td class="i">071</td><td class="d">2027-01-18<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060874&amp;idx=4&amp;sn=6e79a9d35ce50b8cc0e566750939c26c&amp;chksm=bed3ea0789a463112f493f74634be95220a4d15d617a7c85b969aa10f7e95fe8d3a9287aa2a7#rd" target="_blank" rel="noopener">王维《山居秋暝》</a></td><td class="c"><b>秋</b><span>9 画</span></td><td class="n">左右；「禾」旁末捺变点让右，「火」部撇捺舒展</td></tr>
+<tr data-ch="春" data-st="9" data-po="春晓"><td class="i">072</td><td class="d">2027-01-19<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=3&amp;sn=e2f054834e730bf8c73dbd4384a25589&amp;chksm=bed3ea1889a4630ee0d972b2a1769d7d796b857a4203116fb4d7cd3640561d9df2ab6dcd3cc3#rd" target="_blank" rel="noopener">孟浩然《春晓》</a></td><td class="c"><b>春</b><span>9 画</span></td><td class="n">上下；三横间距匀，撇捺舒展盖住「日」</td></tr>
+<tr data-ch="草" data-st="9" data-po="赋得古原草送别"><td class="i">073</td><td class="d">2027-01-20<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060885&amp;idx=5&amp;sn=cc7981ffd548a65431560f0ea5bbe220&amp;chksm=bed3ea1889a4630e05fb518951713ac58869f0b08a3ff0c6fbc1dc9d348c7a08997714a3deca#rd" target="_blank" rel="noopener">白居易《赋得古原草送别》</a></td><td class="c"><b>草</b><span>9 画</span></td><td class="n">上下；草字头两竖内收，「早」中竖贯穿</td></tr>
+<tr data-ch="柳" data-st="9" data-po="咏柳"><td class="i">074</td><td class="d">2027-01-21<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=5&amp;sn=1ef5423d7f084dd5da9ff33e8402ef4e&amp;chksm=bed3ea2d89a4633b2e69e9a7a886a550ce6bca73734ea593d376488fd565baa2c659cbf2645b#rd" target="_blank" rel="noopener">贺知章《咏柳》</a></td><td class="c"><b>柳</b><span>9 画</span></td><td class="n">左右；「木」旁捺变点，「卯」部左右等分</td></tr>
+<tr data-ch="亭" data-st="9" data-po="独坐敬亭山"><td class="i">075</td><td class="d">2027-01-22<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=1&amp;sn=bc4ee6815e3304545c2466b93abd1c04&amp;chksm=bed3ea3389a4632534db88c2d5793295e838ade67c85f992bed89cd4d7f4bba39fd1689b7da7#rd" target="_blank" rel="noopener">李白《独坐敬亭山》</a></td><td class="c"><b>亭</b><span>9 画</span></td><td class="n">上下；点居中，「口」扁，「丁」竖钩对准中线</td></tr>
+<tr data-ch="南" data-st="9" data-po="江南春"><td class="i">076</td><td class="d">2027-01-25<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060937&amp;idx=5&amp;sn=524e98d61df4ec1a8603fe2a4d5d103b&amp;chksm=bed3eac489a463d2b06db83c8aae102c97708c7d84f388fcfdaed23508ca41099d051c857801#rd" target="_blank" rel="noopener">杜牧《江南春》</a></td><td class="c"><b>南</b><span>9 画</span></td><td class="n">上下；横短，框内两横不贴边，竖贯穿</td></tr>
+<tr data-ch="香" data-st="9" data-po="墨梅"><td class="i">077</td><td class="d">2027-01-26<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=3&amp;sn=63efc199ad4f3c20d0eac9fc8dce2947&amp;chksm=bed3ea8e89a4639889fd3dda483c5bab925ed249f06ac4cba0bdfb7ad8fbeb6c19c1374252cc#rd" target="_blank" rel="noopener">王冕《墨梅》</a></td><td class="c"><b>香</b><span>9 画</span></td><td class="n">上下；「禾」撇捺舒展，「日」扁宽居中</td></tr>
+<tr data-ch="将" data-st="9" data-po="塞下曲"><td class="i">078</td><td class="d">2027-01-27<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=1&amp;sn=5bad1dfd606c1298a747cafc5f10ce15&amp;chksm=bed3ea9489a46382e382a4b3d8e4f0001819e249da3080f7794a20b08ef7ca57f611a439329a#rd" target="_blank" rel="noopener">卢纶《塞下曲》</a></td><td class="c"><b>将</b><span>9 画</span></td><td class="n">左右；左部窄长，「寸」竖钩对准中线</td></tr>
+<tr data-ch="星" data-st="9" data-po="嫦娥"><td class="i">079</td><td class="d">2027-01-28<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=3&amp;sn=f8bddd0389305b984f400d750d06baca&amp;chksm=bed3eaa989a463bfba7660ee12c04976024ca9b169ce906fc3728446d9a5a5bde384c0c71106#rd" target="_blank" rel="noopener">李商隐《嫦娥》</a></td><td class="c"><b>星</b><span>9 画</span></td><td class="n">上下；「日」扁宽，「生」三横等距、末横最长</td></tr>
+<tr data-ch="客" data-st="9" data-po="夜书所见"><td class="i">080</td><td class="d">2027-01-29<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061040&amp;idx=3&amp;sn=f4ab42dad9ef74bc029de8a76ec40447&amp;chksm=bed3eabd89a463abeff3f9327750201ec2ec20189f95cdef9910db8eb51580ed3e0b3d417b56#rd" target="_blank" rel="noopener">叶绍翁《夜书所见》</a></td><td class="c"><b>客</b><span>9 画</span></td><td class="n">上下；宝盖头宽，「各」撇捺舒展、口扁</td></tr>
+<tr data-ch="蚕" data-st="10" data-po="蚕妇"><td class="i">081</td><td class="d">2027-02-01<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=1&amp;sn=45401e472154ddaa6fa387e57dedab23&amp;chksm=bed3ea2d89a4633bfc350f5bb4d4e7360156450c568deff41bdc6d55cb6ab7e619e8a1e994e2#rd" target="_blank" rel="noopener">张俞《蚕妇》</a></td><td class="c"><b>蚕</b><span>10 画</span></td><td class="n">上下；「天」撇捺收窄，「虫」部扁宽托上</td></tr>
+<tr data-ch="酒" data-st="10" data-po="凉州词"><td class="i">082</td><td class="d">2027-02-02<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=7&amp;sn=742b1e48176a34e6aff33d6616544044&amp;chksm=bed3ea2d89a4633b82193d7425bb1ae17c4a731bb48516de71539d535ad810ee9383376e5c56#rd" target="_blank" rel="noopener">王翰《凉州词》</a></td><td class="c"><b>酒</b><span>10 画</span></td><td class="n">左右；三点水弧形，「酉」部框正、内横不漏</td></tr>
+<tr data-ch="桑" data-st="10" data-po="四时田园杂兴"><td class="i">083</td><td class="d">2027-02-03<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060926&amp;idx=3&amp;sn=f4364943fa248c71cc95b45dbd11eff5&amp;chksm=bed3ea3389a463251221b6bf2ae9a093a5a5979621c2cefdf64368597471f73d80b224c483a1#rd" target="_blank" rel="noopener">范成大《四时田园杂兴》</a></td><td class="c"><b>桑</b><span>10 画</span></td><td class="n">上下；三个「又」上小下大，末捺变点让下</td></tr>
+<tr data-ch="留" data-st="10" data-po="石灰吟"><td class="i">084</td><td class="d">2027-02-04<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=8&amp;sn=f2a844c1de5ed9f39e8c4279925eab74&amp;chksm=bed3eaf589a463e34765a08a98513ec784b6c9bacc06088f6e3ff1d5ac7beb86a99b31f5266c#rd" target="_blank" rel="noopener">于谦《石灰吟》</a></td><td class="c"><b>留</b><span>10 画</span></td><td class="n">上下；上部左右等分，「田」扁宽托底</td></tr>
+<tr data-ch="射" data-st="10" data-po="前出塞"><td class="i">085</td><td class="d">2027-02-05<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=4&amp;sn=16863fcfb8e0d16f83212583e22f6ab5&amp;chksm=bed3ea8e89a46398cb44935520b2bc19612e575af7f857510f13fb45390121cd67bf01d3f486#rd" target="_blank" rel="noopener">杜甫《前出塞》</a></td><td class="c"><b>射</b><span>10 画</span></td><td class="n">左右；「身」窄长，「寸」竖钩对准中线</td></tr>
+<tr data-ch="家" data-st="10" data-po="示儿"><td class="i">086</td><td class="d">2027-02-08<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=6&amp;sn=61a8b9a2ba8b96e482cb608e7352c08c&amp;chksm=bed3ea8e89a463982996fb3c5470e68bf9945458df67b02a6a9da90878c4a1c6f5bb840fadf5#rd" target="_blank" rel="noopener">陆游《示儿》</a></td><td class="c"><b>家</b><span>10 画</span></td><td class="n">上下；宝盖头宽，弯钩居中，捺舒展</td></tr>
+<tr data-ch="海" data-st="10" data-po="长歌行"><td class="i">087</td><td class="d">2027-02-09<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=7&amp;sn=d4cda3fc613410891f3f1aa946c108df&amp;chksm=bed3ea8e89a463982ca9362363f853c96fd1711aac8fb37175e32ddccf9036c9328b03592db2#rd" target="_blank" rel="noopener">汉乐府《长歌行》</a></td><td class="c"><b>海</b><span>10 画</span></td><td class="n">左右；三点水弧形，「每」部长横平稳</td></tr>
+<tr data-ch="荷" data-st="10" data-po="赠刘景文"><td class="i">088</td><td class="d">2027-02-10<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061017&amp;idx=7&amp;sn=94de3b36a2d31ae9415253e168107a6e&amp;chksm=bed3ea9489a46382626c31a8e06c82a8e1efd7b5b561158fae3548a339f847f162a609dca527#rd" target="_blank" rel="noopener">苏轼《赠刘景文》</a></td><td class="c"><b>荷</b><span>10 画</span></td><td class="n">上下；草字头扁宽，「何」左右等分</td></tr>
+<tr data-ch="难" data-st="10" data-po="无题"><td class="i">089</td><td class="d">2027-02-11<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=1&amp;sn=9f8bd28da3de264fadbfdf472966f30f&amp;chksm=bed3eaa989a463bf1aa2238584925f5d4c70452e8229aa6070de69cac7bff2d859c76b7a9848#rd" target="_blank" rel="noopener">李商隐《无题》</a></td><td class="c"><b>难</b><span>10 画</span></td><td class="n">左右；左部窄长，「隹」四横等距</td></tr>
+<tr data-ch="烟" data-st="10" data-po="乡村四月"><td class="i">090</td><td class="d">2027-02-12<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061040&amp;idx=2&amp;sn=30b144c49eb3f2ebbbaf97454ea0ec83&amp;chksm=bed3eabd89a463ab3b51ed6d51495a93e2a7cd050102b010d9130a3293f7c893f7d7ea5fe40a#rd" target="_blank" rel="noopener">翁卷《乡村四月》</a></td><td class="c"><b>烟</b><span>10 画</span></td><td class="n">左右；火字旁末捺变点，「因」外框方正</td></tr>
+<tr data-ch="梅" data-st="11" data-po="梅花"><td class="i">091</td><td class="d">2027-02-15<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=2&amp;sn=40e1c12feae93c935e39b80c99146eb8&amp;chksm=bed3ea2d89a4633b45d8edd22615571765d171a509fe7043c9c6a8cc9b73fce28258bae71472#rd" target="_blank" rel="noopener">王安石《梅花》</a></td><td class="c"><b>梅</b><span>11 画</span></td><td class="n">左右；「木」旁捺变点，「每」部长横平稳</td></tr>
+<tr data-ch="雪" data-st="11" data-po="江雪"><td class="i">092</td><td class="d">2027-02-16<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060896&amp;idx=3&amp;sn=59d23cc1b2e84f2781def056ce913a65&amp;chksm=bed3ea2d89a4633bf2ae36514fb49437ff769ee2a21ca22b55996f2358ea99f00ade326034d4#rd" target="_blank" rel="noopener">柳宗元《江雪》</a></td><td class="c"><b>雪</b><span>11 画</span></td><td class="n">上下；雨字头扁宽，下部「彐」三横等距</td></tr>
+<tr data-ch="菊" data-st="11" data-po="菊花"><td class="i">093</td><td class="d">2027-02-17<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060909&amp;idx=8&amp;sn=c0fabfbbf7ee43796b4526a787050b36&amp;chksm=bed3ea2089a46336dfbd0b01ec50681b3c509138ad2ddf67f57dea66d918ccbf388749934c86#rd" target="_blank" rel="noopener">元稹《菊花》</a></td><td class="c"><b>菊</b><span>11 画</span></td><td class="n">上下；草字头扁宽，「勹」包住「米」，米字撇捺变点</td></tr>
+<tr data-ch="绿" data-st="11" data-po="泊船瓜洲"><td class="i">094</td><td class="d">2027-02-18<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060995&amp;idx=1&amp;sn=200279394e5ae1b351b06f7b7355d23d&amp;chksm=bed3ea8e89a46398bf0770548196bfd722084a9eeecb83c632c14845fc9b7affda370ec9a691#rd" target="_blank" rel="noopener">王安石《泊船瓜洲》</a></td><td class="c"><b>绿</b><span>11 画</span></td><td class="n">左右；绞丝旁窄长，「录」部上下对正</td></tr>
+<tr data-ch="甜" data-st="11" data-po="蜂"><td class="i">095</td><td class="d">2027-02-19<span class="wd">五</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=4&amp;sn=d68c564246784a96afc25585a0a6a441&amp;chksm=bed3eaa989a463bf84137043e6994a70b3c7295e7efa54539c4e9cc85f89123ca2cb71605b15#rd" target="_blank" rel="noopener">罗隐《蜂》</a></td><td class="c"><b>甜</b><span>11 画</span></td><td class="n">左右；「舌」旁末横变提，「甘」两竖内收</td></tr>
+<tr data-ch="黄" data-st="11" data-po="宿新市徐公店"><td class="i">096</td><td class="d">2027-02-22<span class="wd">一</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061028&amp;idx=6&amp;sn=59135867a94549c7443e9eaab2bfcfc8&amp;chksm=bed3eaa989a463bfc90fb5321691013ce1d37f6b2146252a727d985631ba01bcf149bd319e95#rd" target="_blank" rel="noopener">杨万里《宿新市徐公店》</a></td><td class="c"><b>黄</b><span>11 画</span></td><td class="n">上下；草字头两竖内收，「由」扁宽，两点呼应</td></tr>
+<tr data-ch="街" data-st="12" data-po="早春呈水部张十八员外"><td class="i">097</td><td class="d">2027-02-23<span class="wd">二</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650060984&amp;idx=5&amp;sn=d9bcc5604046adebd1c3ba959efba19c&amp;chksm=bed3eaf589a463e331a2b14203f3d550aedf4cfc43ac06489f6698738e5707c6848c4523c7c3#rd" target="_blank" rel="noopener">韩愈《早春呈水部张十八员外》</a></td><td class="c"><b>街</b><span>12 画</span></td><td class="n">左中右；三部分等高，「圭」中竖贯穿</td></tr>
+<tr data-ch="喜" data-st="12" data-po="闻官军收河南河北"><td class="i">098</td><td class="d">2027-02-24<span class="wd">三</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061006&amp;idx=2&amp;sn=1e5558ea98d41ebbdf131aacbff48bf7&amp;chksm=bed3ea8389a4639555db5bca9a22b66e4f4dc14dc38b30cd4bf3d2c656325a05f3264989aada#rd" target="_blank" rel="noopener">杜甫《闻官军收河南河北》</a></td><td class="c"><b>喜</b><span>12 画</span></td><td class="n">上下；三部分等宽，「口」扁宽居中</td></tr>
+<tr data-ch="雷" data-st="13" data-po="己亥杂诗"><td class="i">099</td><td class="d">2027-02-25<span class="wd">四</span></td><td class="p"><a href="http://mp.weixin.qq.com/s?__biz=MjM5NzgzMjQ4Mg==&amp;mid=2650061040&amp;idx=4&amp;sn=d3f94f73b70672e83e50891a5f765df2&amp;chksm=bed3eabd89a463ab004052fddfcbf8508b749c58ff390c6191ecbea24b94a337edd603e9a283#rd" target="_blank" rel="noopener">龚自珍《己亥杂诗》</a></td><td class="c"><b>雷</b><span>13 画</span></td><td class="n">上下；雨字头扁宽，「田」部四格匀称</td></tr>
+    </tbody>
+  </table>
+  </div></div>
+  <div class="note">
+    点诗名可直达原文（2020 年连载底本，<b>仅供参考，发布前须改写为自家原创</b>）。
+    第 58 首原底本篇名缺失，已补李白《古朗月行》。
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    云逸书院 · 昍朤书法　每日一诗 · 每日一字（诗字课）<br>
+    底本：公众号后台《中华古诗词100集》99 首 + 自家原创 212 篇（写字类 101 篇）
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q'), rows=document.querySelectorAll('#tb tbody tr'),
+      cnt=document.getElementById('cnt');
+  function run(){
+    var v=(q.value||'').trim(), n=0;
+    for(var i=0;i<rows.length;i++){
+      var t=rows[i].textContent||'';
+      var ok = !v || t.indexOf(v)>-1 || rows[i].getAttribute('data-ch')===v;
+      rows[i].className = ok? '' : 'hide';
+      if(ok) n++;
+    }
+    cnt.textContent = '显示 '+n+' / '+rows.length+' 期';
+  }
+  q.addEventListener('input', run);
+  run();
+})();
+</script>
+</body>
+</html>
