@@ -313,6 +313,7 @@ footer{border-top:1px solid #e6dfd1;margin-top:10px;padding:22px 0 34px;
     <a href="https://zheyouzhi.pages.dev/" target="_blank" rel="noopener" style="display:inline-block;background:#fffdf9;border:1px solid #e0d5bf;border-radius:16px;padding:6px 13px;font-size:12.5px;color:#8a4b2a;text-decoration:none">浙游志文旅门户</a>
     <a href="https://xuanlang.mysxl.cn/" target="_blank" rel="noopener" style="display:inline-block;background:#fffdf9;border:1px solid #e0d5bf;border-radius:16px;padding:6px 13px;font-size:12.5px;color:#8a4b2a;text-decoration:none">云逸昍朤工作室</a>
     <a href="https://a9bbd76bdf77afdc8.app.workbuddy.host" target="_blank" rel="noopener" style="display:inline-block;background:#fffdf9;border:1px solid #e0d5bf;border-radius:16px;padding:6px 13px;font-size:12.5px;color:#8a4b2a;text-decoration:none">云逸书院八号矩阵</a>
+    <a href="https://4m66tta4m3zcc.doubao.link/app/app_17gdt0a3zka/" target="_blank" rel="noopener" style="display:inline-block;background:#fffdf9;border:1px solid #e0d5bf;border-radius:16px;padding:6px 13px;font-size:12.5px;color:#8a4b2a;text-decoration:none">浙商青云榜（青年人才打榜平台）</a>
   </div>
   <div style="margin-top:10px;font-size:12px;color:#8a8078">本站为「每日一诗 · 每日一字（诗字课）」，隶属云逸书院官网。</div>
 </div>
@@ -321,6 +322,7 @@ footer{border-top:1px solid #e6dfd1;margin-top:10px;padding:22px 0 34px;
   <div class="wrap">
     云逸书院 · 昍朤书法　每日一诗 · 每日一字（诗字课）<br>
     底本：公众号后台《中华古诗词100集》99 首 + 自家原创 212 篇（写字类 101 篇）
+    <div class="vst" data-mark="vst" hidden style="margin-top:6px;font-size:12px;color:#8a8078"></div>
   </div>
 </footer>
 
@@ -343,5 +345,27 @@ footer{border-top:1px solid #e6dfd1;margin-top:10px;padding:22px 0 34px;
 })();
 </script>
 <div style="max-width:640px;margin:26px auto 10px;text-align:center"><img src="../caa-signup-ad.png" alt="中国美院考级在线报名 — 请扫码查看详细，按要求提交相关信息" style="display:block;width:100%;height:auto;border-radius:10px;border:1px solid #d8d2c6" loading="lazy"></div>
+<script>
+(function(){
+  var EP='https://taizhou-pinke.app.workbuddy.host/api/hit';
+  var el=document.querySelector('[data-mark="vst"]');
+  if(!el||!window.fetch) return;
+  var fp=null;
+  try{
+    fp=localStorage.getItem('yy_vid');
+    if(!fp){fp='v'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('yy_vid',fp);}
+  }catch(e){}
+  fetch(EP+'?page='+encodeURIComponent(location.pathname)+(fp?'&fp='+encodeURIComponent(fp):''),{mode:'cors'})
+   .then(function(r){return r.json();})
+   .then(function(d){
+     if(!d||!d.ok) return;
+     function n(x){return Number(x||0).toLocaleString('zh-CN');}
+     var mode=d.via==='ip'?'（按 IP 去重）':(d.via==='fp'?'（按访客设备去重）':'');
+     el.innerHTML='访问统计 · 累计 <b style="color:#8a4b2a">'+n(d.pv)+'</b> 次 · 独立访客 <b style="color:#8a4b2a">'+n(d.uv)+'</b> 人'+mode+' · 今日 <b style="color:#8a4b2a">'+n(d.todayPv)+'</b> 次';
+     el.hidden=false;
+   })
+   .catch(function(){});
+})();
+</script>
 </body>
 </html>
